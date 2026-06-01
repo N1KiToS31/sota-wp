@@ -1,0 +1,48 @@
+.footer{
+    margin-top: auto;
+    margin-bottom: 30px;
+    width: 100%;
+    &__container{
+        position: relative;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: end;
+        
+        &-more{
+            font-size: 20px;
+            cursor: pointer;
+            justify-self: start;
+        }
+        &-date{
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            justify-self: center;
+            cursor: default;
+        }
+        &-socials{
+            justify-self: end;
+            
+            
+            
+            &-list{
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 143px);
+                list-style: none;
+                &-item{
+                    cursor: pointer;
+                    &:nth-child(odd){
+                        text-align: left;
+                    }
+                    &:nth-child(even){
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

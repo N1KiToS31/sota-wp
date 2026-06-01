@@ -1,0 +1,44 @@
+.site-header__inner {
+  display: grid;
+  align-items: center;
+  justify-content: baseline;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.site-logo__img{
+    height: 80px;
+    justify-self: center;
+}
+
+.site-nav{
+    justify-self: start;
+    display: flex;
+    gap: 164px;
+}
+
+.site-nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.header__cta{
+    position: relative;
+    justify-self: end;
+    display: inline-flex;
+    width: 240px;
+    height: 74px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header__cta-bg{
+    position: absolute;
+}
+
+.header__cta-text{
+    color: black;
+    z-index: 100;
+    font-size: 24px;
+}
