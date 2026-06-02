@@ -1,0 +1,117 @@
+.services{
+    &__container{
+
+        &:hover &-list-item:not(:hover) &-list-item-title{
+            width: 343px;
+            transform: rotate(90deg);
+            align-self: center;
+        }
+
+        &:hover &-list-item:not(:hover) &-list-item-price{
+            font-size: 25px;
+        }
+
+        &-title{
+
+        }
+
+        &-subtitle{
+
+        }
+
+        &-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            &-item{
+                position: relative;
+                flex: 1;
+                border: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 672px;
+                min-width: 100px;
+                max-width: 100%;
+                cursor: pointer;
+                overflow: hidden;
+                transition: flex 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+
+                &:hover{
+                    flex: 2;
+                    z-index: 2;
+                }
+
+                &-title{
+                    justify-self: center;
+                    margin-top: 300px;
+                    margin-bottom: 0;
+                    transition: transform 0.6s ease, opacity 0.4s ease, margin-top 0.4s ease, font-size 0.4s ease;
+                    transform-origin: center;
+                    font-size: 36px;
+                }
+
+                &:hover &-title{
+                    margin-top: 50px;
+                    font-size: 48px;
+                }
+
+                &-price{
+                    position: absolute;
+                    bottom: 50px;
+                    margin-bottom: 0;
+                    font-size: 40px;
+                    transition: all 0.5s ease;
+                }
+
+                &:hover &-price{
+                    margin-top: 13px;
+                    
+                }
+
+                &:not(:hover) &-price{
+                    transform: scale(0.8);
+                }
+
+                &-hover{
+                    
+                    
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: transform 0.2s ease, opacity 0.3s ease;
+                    text-align: center;
+                    margin-top: 128px;
+
+                    &-subtitle{
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        font-size: 36px;
+                        height: 196px;
+                        
+                    }
+                    &-date{
+                        margin-top: 90px;
+                        font-size: 40px;
+                    }
+                }
+
+                &:hover &-hover{
+                    position: relative;
+                    opacity: 1;
+                    visibility: visible;
+                    margin-top: 128px;
+                }
+
+                
+            }
+        }
+
+        &-cta{
+
+        }
+
+        &-additional{
+
+        }
+    }
+}

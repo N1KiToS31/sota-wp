@@ -5,3 +5,17 @@ body {
   background: #14110F;
   color: white;
 }
+
+.section{
+  padding: 0 96px 0 96px;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}

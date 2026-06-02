@@ -1,4 +1,4 @@
-<section class = 'hero' id = 'hero'>
+<section class = 'hero section' id = 'hero'>
     <div class = 'hero__container'>
 
         <div class = 'hero__header'>
