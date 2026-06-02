@@ -37,6 +37,13 @@ function studio_theme_assets() {
   );
 
     wp_enqueue_style(
+    'studio-form',
+    get_template_directory_uri() . '/assets/scss/form.css',
+    [],
+    '1.0'
+  );
+
+    wp_enqueue_style(
     'studio-cases',
     get_template_directory_uri() . '/assets/scss/cases.css',
     [],

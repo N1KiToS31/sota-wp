@@ -25,7 +25,7 @@
         <img class="site-logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Studio">
       </a>
 
-      <a class="header__cta">
+      <a class="header__cta" href="<?php echo esc_url(home_url('/form')); ?>">
         <svg class="header__cta-bg" width="240" height="74" viewBox="0 0 240 74" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M119.944 0L239.889 18.5V55.5L119.944 74L-0.000183105 55.5V18.5L119.944 0Z" fill="white"/>
         </svg>
