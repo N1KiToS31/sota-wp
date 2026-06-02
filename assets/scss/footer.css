@@ -12,11 +12,13 @@
 }
 .footer__container-more {
   font-size: 20px;
+  font-family: var(--unbounded-font);
   cursor: pointer;
   justify-self: start;
 }
 .footer__container-date {
   font-size: 20px;
+  font-family: var(--unbounded-font);
   margin: 0;
   padding: 0;
   justify-self: center;
@@ -32,6 +34,7 @@
   display: grid;
   grid-template-columns: repeat(2, 143px);
   list-style: none;
+  font-family: var(--unbounded-font);
 }
 .footer__container-socials-list-item {
   cursor: pointer;

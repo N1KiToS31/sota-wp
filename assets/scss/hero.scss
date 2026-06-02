@@ -30,6 +30,7 @@
         font-size: 48px;
         font-weight: 400;
         cursor: default;
+        font-family: var(--unbounded-font);
     }
 
     &__text{
@@ -38,6 +39,7 @@
         width: 680px;
         font-weight: 200;
         cursor: default;
+        font-family: var(--manrope-font);
     }
     &__cta{
         display: flex;
@@ -54,6 +56,7 @@
         &-text{
             position: relative;
             font-size: 20px;
+            font-family: var(--unbounded-font);
         }
     }
 }

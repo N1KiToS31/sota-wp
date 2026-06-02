@@ -20,6 +20,7 @@
     text-decoration: none;
     color: white;
     font-size: 24px;
+    font-family: var(--unbounded-font);
 }
 
 .header__cta{
@@ -41,4 +42,5 @@
     color: black;
     z-index: 100;
     font-size: 24px;
+    font-family: var(--unbounded-font);
 }
