@@ -1,28 +1,46 @@
 .services{
+    min-height: 100vh;
+    scroll-snap-align: start;
     &__container{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        
 
-        &:hover &-list-item:not(:hover) &-list-item-title{
-            width: 343px;
-            transform: rotate(90deg);
-            align-self: center;
-        }
-
-        &:hover &-list-item:not(:hover) &-list-item-price{
-            font-size: 25px;
-        }
+        
 
         &-title{
-
+            margin-top: 35px;
+            margin-bottom: 0;
+            font-size: 48px;
+            align-self: center;
+            font-weight: 400;
         }
 
         &-subtitle{
-
+            margin-top: 28px;
+            margin-bottom: 0;
+            font-size: 36px;
+            font-weight: 200;
         }
 
         &-list{
+            gap: 0;
+            margin-top: 37px;
             display: flex;
             flex-direction: row;
             justify-content: center;
+
+            &:hover &-item:not(:hover) &-item-title{
+                width: 343px;
+                transform: rotate(90deg);
+                align-self: center;
+            }
+
+            &:hover &-item:not(:hover) &-item-price{
+                font-size: 25px;
+            }
+
             &-item{
                 position: relative;
                 flex: 1;
@@ -30,7 +48,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                height: 672px;
+                height: clamp(420px, 60vh, 672px);
                 min-width: 100px;
                 max-width: 100%;
                 cursor: pointer;
@@ -43,7 +61,7 @@
                 }
 
                 &-title{
-                    justify-self: center;
+                    align-self: center;
                     margin-top: 300px;
                     margin-bottom: 0;
                     transition: transform 0.6s ease, opacity 0.4s ease, margin-top 0.4s ease, font-size 0.4s ease;
@@ -65,19 +83,20 @@
                 }
 
                 &:hover &-price{
+                    position: relative;
                     margin-top: 13px;
-                    
                 }
 
                 &:not(:hover) &-price{
-                    transform: scale(0.8);
+                    transform: scale(0.9);
                 }
 
                 &-hover{
                     
-                    
                     opacity: 0;
                     visibility: hidden;
+                    transform: translateY(20px);
+                    pointer-events: none;
                     transition: transform 0.2s ease, opacity 0.3s ease;
                     text-align: center;
                     margin-top: 128px;
@@ -99,19 +118,38 @@
                     position: relative;
                     opacity: 1;
                     visibility: visible;
-                    margin-top: 128px;
+                    transform: translateY(0);
+                    pointer-events: auto;
                 }
 
                 
             }
         }
 
-        &-cta{
+        &-list-item + &-list-item {
+            border-left: 0;
+        }
 
+        &-cta{
+            align-self: center;
+            margin-top: 53px;
+            width: 193px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-img{
+                position: absolute;
+            }
+
+            &-text{
+                font-size: 16px;
+                font-weight: 400;
+            }
         }
 
         &-additional{
-
+            font-size: 20px;
         }
     }
 }

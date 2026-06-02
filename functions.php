@@ -29,6 +29,13 @@ function studio_theme_assets() {
     '1.0'
   );
 
+  wp_enqueue_style(
+    'studio-services',
+    get_template_directory_uri() . '/assets/scss/services.css',
+    [],
+    '1.0'
+  );
+
     wp_enqueue_style(
     'studio-cases',
     get_template_directory_uri() . '/assets/scss/cases.css',
@@ -75,6 +82,8 @@ function studio_theme_assets() {
 }
 
 add_action('wp_enqueue_scripts', 'studio_theme_assets');
+
+add_filter('show_admin_bar', '__return_false');
 
 
 ?>
