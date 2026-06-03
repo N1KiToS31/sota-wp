@@ -92,5 +92,59 @@ add_action('wp_enqueue_scripts', 'studio_theme_assets');
 
 add_filter('show_admin_bar', '__return_false');
 
+add_action('admin_post_nopriv_send_project_form', 'send_project_form');
+add_action('admin_post_send_project_form', 'send_project_form');
+
+function send_project_form() {
+    $name = sanitize_text_field($_POST['name'] ?? '');
+    $company = sanitize_text_field($_POST['company'] ?? '');
+    $email = sanitize_email($_POST['email'] ?? '');
+    $phone = sanitize_text_field($_POST['phone'] ?? '');
+    $site_url = esc_url_raw($_POST['site_url'] ?? '');
+    $message = sanitize_text_field($_POST['message'] ?? '');
+
+    /**
+     * Telegram
+     */
+    $token = '8638133154:AAHVDOyVp4u8Pk6jIhcm6uHWmdx0uVu_VWQ';
+    $chat_id = '1076544880';
+
+    $text = "Новая заявка с сайта:\n\n";
+    $text .= "Задача: {$message}\n\n";
+    $text .= "ФИО: {$name}\n";
+    $text .= "Компания: {$company}\n";
+    $text .= "Email: {$email}\n";
+    $text .= "Телефон: {$phone}\n";
+    $text .= "Сайт: {$site_url}\n";
+
+    $telegram_response = wp_remote_post("https://api.telegram.org/bot{$token}/sendMessage", [
+        'body' => [
+            'chat_id' => $chat_id,
+            'text' => $text,
+        ],
+    ]);
+
+    /**
+     * Google Sheets
+     */
+    $google_script_url = 'https://script.google.com/macros/s/AKfycbzWhLNirggdzoax645qC9Sv3U90E0WeIjhFx8ozOqRnq6JcIYa2yEANdOWdpea24iwvJA/exec';
+
+    $google_response = wp_remote_post($google_script_url, [
+        'headers' => [
+            'Content-Type' => 'application/json',
+        ],
+        'body' => wp_json_encode([
+            'name' => $name,
+            'company' => $company,
+            'email' => $email,
+            'phone' => $phone,
+            'site_url' => $site_url,
+            'message' => $message,
+        ]),
+    ]);
+
+    wp_redirect(home_url('/'));
+    exit;
+}
 
 ?>

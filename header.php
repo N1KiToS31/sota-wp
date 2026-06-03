@@ -9,8 +9,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div class="hero-screen" id="heroScreen">
-  <canvas class="sota-canvas" id="sotaCanvas"></canvas>
+<?php if ( is_front_page() ) : ?>
+  <div class="hero-screen" id="heroScreen">
+    <canvas class="sota-canvas" id="sotaCanvas"></canvas>
+<?php endif; ?>
 
   <header class="site-header">
     <div class="site-header__inner">

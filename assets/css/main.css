@@ -10,6 +10,10 @@ body {
   padding: 0 96px 0 96px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
