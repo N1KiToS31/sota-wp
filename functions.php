@@ -57,12 +57,19 @@ function studio_theme_assets() {
     '1.0'
   );
 
-    wp_enqueue_style(
-      'studio-about',
-      get_template_directory_uri() . '/assets/scss/about.css',
-      [],
-      '1.0'
-    );
+  wp_enqueue_style(
+    'studio-about',
+    get_template_directory_uri() . '/assets/scss/about.css',
+    [],
+    '1.0'
+  );
+
+  wp_enqueue_style(
+    'studio-policy',
+    get_template_directory_uri() . '/assets/scss/policy.css',
+    [],
+    '1.0'
+  );
 
   wp_enqueue_style(
     'variables', 
@@ -111,6 +118,14 @@ function studio_theme_assets() {
     wp_enqueue_script(
     'studio-form',
     get_template_directory_uri() . '/assets/js/form.js',
+    [],
+    '1.0',
+    true
+  );
+
+  wp_enqueue_script(
+    'studio-about',
+    get_template_directory_uri() . '/assets/js/about.js',
     [],
     '1.0',
     true
