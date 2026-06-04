@@ -20,6 +20,6 @@
             </svg>
             <span class="cases__container-btn-text"><?php the_field('cases_btn'); ?></span>
         </a>
-        <span class="cases__container-about">О команде</span>
+        <a class="cases__container-about" href="#about">О команде</a>
     </div>
 </section>

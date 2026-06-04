@@ -14,13 +14,19 @@
     <canvas class="sota-canvas" id="sotaCanvas"></canvas>
 <?php endif; ?>
 
-  <header class="site-header">
+<?php
+$services_link = is_front_page() ? '#services' : home_url('/#services');
+$cases_link    = is_front_page() ? '#cases' : home_url('/#cases');
+$about_link    = is_front_page() ? '#about' : home_url('/#about');
+?>
+
+  <header class="site-header" id = 'top'>
     <div class="site-header__inner">
 
       <nav class="site-nav">
-        <a href="#services">Услуги</a>
-        <a href="#cases">Кейсы</a>
-        <a href="#about">О нас</a>
+        <a href="<?php echo esc_url($services_link); ?>">Услуги</a>
+        <a href="<?php echo esc_url($cases_link); ?>">Кейсы</a>
+        <a href="<?php echo esc_url($about_link); ?>">О нас</a>
       </nav>
 
       <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">

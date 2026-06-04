@@ -71,6 +71,8 @@
   font-family: var(--unbounded-font);
 }
 .cases__container-about {
+  color: white;
+  text-decoration: none;
   margin-top: 60px;
   font-size: 18px;
   font-family: var(--manrope-font);

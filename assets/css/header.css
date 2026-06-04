@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .header__cta-bg{
@@ -40,6 +41,7 @@
 
 .header__cta-text{
     color: black;
+    text-decoration: none;
     z-index: 100;
     font-size: 24px;
     font-family: var(--unbounded-font);

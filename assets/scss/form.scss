@@ -62,7 +62,7 @@
       }
     }
 
-    &-contacts-title {
+        &-contacts-title {
       grid-area: contacts-title;
       height: 40px;
       margin-top: 24px;
@@ -160,17 +160,17 @@
       margin-top: 28px;
     }
   }
+
 }
 
-
 .error {
-  border: 1px solid #ff4d4f;
+    border-color: red;
 }
 
 .error-message {
-  color: #ff4d4f;
-  font-size: 12px;
-  margin-top: 4px;
-  min-height: 16px;
-  position: absolute;
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
 }

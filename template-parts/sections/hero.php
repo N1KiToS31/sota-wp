@@ -10,7 +10,7 @@
                 <?php the_field('hero_text'); ?>
             </h2>
 
-            <a class = 'hero__cta' href="<?php the_field('hero_button_link'); ?>">
+            <a class = 'hero__cta' href="<?php echo esc_url(home_url('/form')); ?>">
                 <svg class = 'hero__cta-svg' width="279" height="100" viewBox="0 0 279 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <foreignObject x="-15" y="-15" width="308.859" height="130"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(7.5px);clip-path:url(#bgblur_0_4104_11533_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="15" d="M278.359 25.418V74.5811L139.43 99.4912L0.5 74.5811V25.418L139.43 0.507812L278.359 25.418Z" fill="#14110F" stroke="white"/>
                     <defs>
@@ -23,7 +23,7 @@
 
         <footer class="footer">
             <div class="footer__container">
-                <a class = 'footer__container-more'>
+                <a class = 'footer__container-more' href = '#services'>
                 Подробнее
                 </a>
                 <p class = 'footer__container-date'>&copy;<?php echo date('Y'); ?></p>

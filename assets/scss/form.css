@@ -146,13 +146,13 @@
 }
 
 .error {
-  border: 1px solid #ff4d4f;
+  border-color: red;
 }
 
 .error-message {
-  color: #ff4d4f;
+  position: absolute;
+  color: red;
   font-size: 12px;
   margin-top: 4px;
   min-height: 16px;
-  position: absolute;
 }/*# sourceMappingURL=form.css.map */
