@@ -29,6 +29,13 @@ function studio_theme_assets() {
     '1.0'
   );
 
+    wp_enqueue_style(
+    'studio-reset',
+    get_template_directory_uri() . '/assets/scss/reset.css',
+    [],
+    '1.0'
+  );
+
   wp_enqueue_style(
     'studio-services',
     get_template_directory_uri() . '/assets/scss/services.css',
@@ -82,6 +89,14 @@ function studio_theme_assets() {
   wp_enqueue_script(
     'studio-sota',
     get_template_directory_uri() . '/assets/js/sota.js',
+    [],
+    '1.0',
+    true
+  );
+
+    wp_enqueue_script(
+    'studio-form',
+    get_template_directory_uri() . '/assets/js/form.js',
     [],
     '1.0',
     true
