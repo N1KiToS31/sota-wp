@@ -1,9 +1,20 @@
 .form {
-  min-height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    min-height: 100vh;
 
-  &__main {
-    margin: 30px 96px;
-  }
+    &__main {
+        margin: 30px 96px;
+    }
+
+    &__title{
+        font-family: var(--unbounded-font);
+        font-size: 36px;
+        text-transform: lowercase;
+        font-weight: 300;
+        margin-top: 35px;
+    }
 }
 
 .container {
@@ -21,11 +32,13 @@
       "button button";
     grid-template-columns: repeat(2, 1fr);
     column-gap: 50px;
+    width: 101vh;
+    margin-top: 60px;
 
     &-task-title {
       grid-area: task-title;
       height: 40px;
-      font-family: var(--font-fam);
+      font-family: var(--unbounded-font);
       font-size: 36px;
       text-transform: lowercase;
       font-weight: 300;
@@ -39,21 +52,21 @@
       border-bottom: 2px solid white;
       background: transparent;
       color: white;
-      font-family: var(--font-fam2);
+      font-family: var(--manrope-font);
       font-size: 24px;
 
       &::placeholder {
         color: white;
-        font-family: var(--font-fam2);
+        font-family: var(--manrope-font);
         font-size: 24px;
       }
     }
 
-    &-contacts-title {
+        &-contacts-title {
       grid-area: contacts-title;
       height: 40px;
       margin-top: 24px;
-      font-family: var(--font-fam);
+      font-family: var(--unbounded-font);
       font-size: 36px;
       text-transform: lowercase;
       font-weight: 300;
@@ -71,12 +84,12 @@
         border-bottom: 2px solid white;
         background: transparent;
         color: white;
-        font-family: var(--font-fam2);
+        font-family: var(--manrope-font);
         font-size: 24px;
 
         &::placeholder {
           color: white;
-          font-family: var(--font-fam2);
+          font-family: var(--manrope-font);
           font-size: 24px;
         }
       }
@@ -110,12 +123,12 @@
       border-bottom: 2px solid white;
       background: transparent;
       color: white;
-      font-family: var(--font-fam2);
+      font-family: var(--manrope-font);
       font-size: 24px;
 
       &::placeholder {
         color: white;
-        font-family: var(--font-fam2);
+        font-family: var(--manrope-font);
         font-size: 24px;
       }
     }
@@ -128,7 +141,7 @@
 
       &-policy {
         height: 19px;
-        font-family: var(--font-fam2);
+        font-family: var(--manrope-font);
         font-size: 13px;
         color: #898887;
 
@@ -147,4 +160,17 @@
       margin-top: 28px;
     }
   }
+
+}
+
+.error {
+    border-color: red;
+}
+
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
 }

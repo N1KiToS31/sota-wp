@@ -5,30 +5,32 @@
     <form class="container__form">
       <h2 class="container__form-task-title">Задача:</h2>
 
-      <input
-        class="container__form-task-input"
-        name="message"
-        placeholder="опишите задачу в свободной форме"
-      >
+    <input 
+      id="task" 
+      placeholder="опишите задачу в свободной форме"
+      class="container__form-task-input"
+      name="message"
+      type="text"
+    />
 
-      <label class="container__form-file">
-        <input class="container__form-file-input" type="file">
-        <span class="container__form-file-title">Прикрепить файл</span>
-      </label>
+    <h1 class="container__form-contacts-title">
+      контактные данные:
+    </h1>
 
-      <h2 class="container__form-contacts-title">контактные данные:</h2>
-
+    <div class="container__form-contacts">
       <input
         class="container__form-contacts-name"
         name="name"
         placeholder="фио"
       >
+      <div class="error-message" data-error-for="name"></div>
 
       <input
         class="container__form-contacts-company"
         name="company"
         placeholder="компания"
       >
+      
 
       <input
         class="container__form-contacts-email"
@@ -36,6 +38,8 @@
         type="email"
         placeholder="e-mail"
       >
+      <div class="error-message" data-error-for="email"></div>
+
 
       <input
         class="container__form-contacts-phone"
@@ -43,6 +47,7 @@
         type="tel"
         placeholder="телефон"
       >
+      <div class="error-message" data-error-for="phone"></div>
 
       <input
         class="container__form-url"
