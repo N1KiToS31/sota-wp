@@ -53,7 +53,7 @@
       <div class="container__form-privacy">
         <p class="container__form-privacy-policy">
           Нажимая кнопку, вы соглашаетесь с 
-          <a href="#">политикой конфиденциальности</a>
+          <a href="#policy">политикой конфиденциальности</a>
         </p>
       </div>
 
