@@ -50,9 +50,23 @@ function studio_theme_assets() {
     '1.0'
   );
 
+    wp_enqueue_style(
+      'studio-about',
+      get_template_directory_uri() . '/assets/scss/about.css',
+      [],
+      '1.0'
+    );
+
   wp_enqueue_style(
     'variables', 
     get_template_directory_uri() . '/assets/scss/variables.css',
+    [], 
+    '1.0'
+  );
+
+  wp_enqueue_style(
+    'bee-animation', 
+    get_template_directory_uri() . '/assets/scss/bee.css',
     [], 
     '1.0'
   );
@@ -82,6 +96,14 @@ function studio_theme_assets() {
   wp_enqueue_script(
     'studio-sota',
     get_template_directory_uri() . '/assets/js/sota.js',
+    [],
+    '1.0',
+    true
+  );
+
+  wp_enqueue_script(
+    'studio-about',
+    get_template_directory_uri() . '/assets/js/about.js',
     [],
     '1.0',
     true

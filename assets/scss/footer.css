@@ -1,7 +1,6 @@
 .footer {
   margin-top: auto;
   margin-bottom: 30px;
-  width: 100%;
 }
 .footer__container {
   position: relative;
@@ -11,6 +10,8 @@
   align-items: end;
 }
 .footer__container-more {
+  color: white;
+  text-decoration: none;
   font-size: 20px;
   font-family: var(--unbounded-font);
   cursor: pointer;
@@ -44,4 +45,8 @@
 }
 .footer__container-socials-list-item:nth-child(even) {
   text-align: right;
+}
+
+.main-footer {
+  padding: 0 96px 0 96px;
 }/*# sourceMappingURL=footer.css.map */

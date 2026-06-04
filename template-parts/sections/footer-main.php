@@ -1,4 +1,4 @@
-<footer class="footer main-footer">
+<footer class="footer">
             <div class="footer__container">
                 <a href="#top" class="footer__container-bee-link" aria-label="Наверх">
                  <svg width="69" height="72" viewBox="0 0 69 72" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer__container-bee-link-img">
@@ -30,7 +30,3 @@
                 </nav>
             </div>
 </footer>
-
-<?php wp_footer(); ?>
-</body>
-</html>

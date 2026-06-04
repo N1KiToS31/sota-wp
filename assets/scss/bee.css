@@ -1,0 +1,48 @@
+.footer__container-bee-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  height: 72px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer__container-bee-link-img {
+  display: block;
+  width: 69px;
+  height: 72px;
+  overflow: visible;
+}
+.footer__container-bee-link:hover .footer__bee-wing--left {
+  animation: bee-wing-left 0.18s infinite alternate ease-in-out;
+}
+.footer__container-bee-link:hover .footer__bee-wing--right {
+  animation: bee-wing-right 0.18s infinite alternate ease-in-out;
+}
+.footer__bee-wing {
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+.footer__bee-wing--left {
+  transform-origin: right center;
+}
+.footer__bee-wing--right {
+  transform-origin: left center;
+}
+
+@keyframes bee-wing-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-18deg);
+  }
+}
+@keyframes bee-wing-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(18deg);
+  }
+}/*# sourceMappingURL=bee.css.map */

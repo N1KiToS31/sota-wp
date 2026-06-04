@@ -1,82 +1,65 @@
 <section class="form">
-  <form 
-    action="<?php echo esc_url(admin_url('admin-post.php')); ?>" 
-    method="post"
-    class="container__form"
-  >
+  <div class="form__main">
+    <h1 class="form__title">Собрать улей</h1>
 
-    <input type="hidden" name="action" value="send_project_form">
+    <form class="container__form">
+      <h2 class="container__form-task-title">Задача:</h2>
 
-    <h1 class="container__form-task-title">
-      Задача
-    </h1>
-
-    <input 
-      id="task" 
-      placeholder="опишите задачу в свободной форме"
-      class="container__form-task-input"
-      name="message"
-      type="text"
-    />
-
-    <h1 class="container__form-contacts-title">
-      контактные данные:
-    </h1>
-
-    <div class="container__form-contacts">
       <input
-        placeholder="ФИО"
-        type="text" 
+        class="container__form-task-input"
+        name="message"
+        placeholder="опишите задачу в свободной форме"
+      >
+
+      <label class="container__form-file">
+        <input class="container__form-file-input" type="file">
+        <span class="container__form-file-title">Прикрепить файл</span>
+      </label>
+
+      <h2 class="container__form-contacts-title">контактные данные:</h2>
+
+      <input
         class="container__form-contacts-name"
         name="name"
-        required
+        placeholder="фио"
       >
 
       <input
-        placeholder="Компания"
-        type="text" 
         class="container__form-contacts-company"
         name="company"
+        placeholder="компания"
       >
 
       <input
-        placeholder="e-mail"
-        type="email"
-        class="container__form-contacts-mail"
+        class="container__form-contacts-email"
         name="email"
+        type="email"
+        placeholder="e-mail"
       >
 
       <input
-        placeholder="телефон"
-        type="tel" 
         class="container__form-contacts-phone"
         name="phone"
-        required
+        type="tel"
+        placeholder="телефон"
       >
 
       <input
-        placeholder="url(например, сайт компании)"
-        type="url" 
-        class="container__form-contacts-url"
+        class="container__form-url"
         name="site_url"
+        placeholder="url(например, сайт компании)"
       >
-    </div>
 
-    <span class="container__form-about">
-      нажимая кнопку „отправить”, вы даете 
-      <a href="#" class="container__form-about-href">
-        согласие 
-      </a>
-      на обработку персональных данных.
-      <a href="#" class="container__form-about-href">
-        политика обработки данных
-      </a>
-    </span>
+      <div class="container__form-privacy">
+        <p class="container__form-privacy-policy">
+          Нажимая кнопку, вы соглашаетесь с 
+          <a href="#">политикой конфиденциальности</a>
+        </p>
+      </div>
 
-    <button type="submit" class="container__form-btn">
-      <img src="#" alt="" class="container__form-btn-img">
-      отправить
-    </button>
-
-  </form>
+      <button class="container__form-button" type="submit">
+        Отправить
+      </button>
+    </form>
+  </div>
 </section>

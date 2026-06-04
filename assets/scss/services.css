@@ -8,6 +8,7 @@
   min-height: 100vh;
 }
 .services__container-title {
+  font-family: var(--unbounded-font);
   margin-top: 35px;
   margin-bottom: 0;
   font-size: 48px;
@@ -15,9 +16,10 @@
   font-weight: 400;
 }
 .services__container-subtitle {
+  font-family: var(--manrope-font);
   margin-top: 28px;
   margin-bottom: 0;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 200;
 }
 .services__container-list {
@@ -59,7 +61,9 @@
   margin-bottom: 0;
   transition: transform 0.6s ease, opacity 0.4s ease, margin-top 0.4s ease, font-size 0.4s ease;
   transform-origin: center;
-  font-size: 36px;
+  font-size: 34px;
+  font-family: var(--unbounded-font);
+  font-weight: 400;
 }
 .services__container-list-item:hover .services__container-list-item-title {
   margin-top: 50px;
@@ -71,6 +75,8 @@
   margin-bottom: 0;
   font-size: 40px;
   transition: all 0.5s ease;
+  font-family: var(--unbounded-font);
+  font-weight: 400;
 }
 .services__container-list-item:hover .services__container-list-item-price {
   position: relative;
@@ -93,10 +99,14 @@
   margin-bottom: 0;
   font-size: 36px;
   height: 196px;
+  font-family: var(--manrope-font);
+  font-weight: 400;
 }
 .services__container-list-item-hover-date {
-  margin-top: 90px;
+  margin-top: 80px;
   font-size: 40px;
+  font-family: var(--unbounded-font);
+  font-weight: 400;
 }
 .services__container-list-item:hover .services__container-list-item-hover {
   position: relative;
@@ -109,6 +119,8 @@
   border-left: 0;
 }
 .services__container-cta {
+  color: white;
+  text-decoration: none;
   align-self: center;
   margin-top: 53px;
   width: 193px;
@@ -121,9 +133,13 @@
   position: absolute;
 }
 .services__container-cta-text {
+  font-family: var(--unbounded-font);
   font-size: 16px;
   font-weight: 400;
 }
 .services__container-additional {
+  color: white;
+  text-decoration: none;
   font-size: 20px;
+  font-family: var(--unbounded-font);
 }/*# sourceMappingURL=services.css.map */

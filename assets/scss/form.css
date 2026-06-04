@@ -1,69 +1,134 @@
 .form {
   min-height: 100vh;
-  padding: 60px 0;
-  color: #fff;
 }
-.form .container__form {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.form__main {
+  margin: 30px 96px;
 }
-.form .container__form-task-title, .form .container__form-contacts-title {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 300;
-  line-height: 1;
-  text-transform: lowercase;
-}
-.form .container__form-contacts-title {
-  margin-top: 30px;
-}
-.form .container__form input {
-  width: 100%;
-  padding: 14px 0;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.85);
-  outline: none;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 300;
-  transition: border-color 0.3s ease;
-}
-.form .container__form input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 24px;
-  font-weight: 300;
-}
-.form .container__form input::placeholder {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 24px;
-  font-weight: 300;
-}
-.form .container__form input:focus {
-  border-bottom-color: #fff;
-}
-.form .container__form-task-input {
-  min-height: 70px;
-}
-.form .container__form-contacts {
+
+.container__form {
   display: grid;
+  grid-template-areas: "task-title task-title" "task-input task-input" "file-button file-button" "contacts-title contacts-title" "name company" "email phone" "url url" "privacy privacy" "button button";
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px 80px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
-.form .container__form-contacts-url {
-  grid-column: 1/-1;
+.container__form-task-title {
+  grid-area: task-title;
+  height: 40px;
+  font-family: var(--font-fam);
+  font-size: 36px;
+  text-transform: lowercase;
+  font-weight: 300;
 }
-.form .container__form-about {
-  display: block;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 14px;
-  line-height: 1.6;
+.container__form-task-input {
+  grid-area: task-input;
+  margin-top: 30px;
+  height: 40px;
+  border: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
 }
-.form .container__form-about-href {
-  color: #fff;
+.container__form-task-input::-moz-placeholder {
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-task-input::placeholder {
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-contacts-title {
+  grid-area: contacts-title;
+  height: 40px;
+  margin-top: 24px;
+  font-family: var(--font-fam);
+  font-size: 36px;
+  text-transform: lowercase;
+  font-weight: 300;
+}
+.container__form-contacts {
+  display: contents;
+}
+.container__form-contacts-name, .container__form-contacts-company, .container__form-contacts-email, .container__form-contacts-phone {
+  height: 40px;
+  border: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-contacts-name::-moz-placeholder, .container__form-contacts-company::-moz-placeholder, .container__form-contacts-email::-moz-placeholder, .container__form-contacts-phone::-moz-placeholder {
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-contacts-name::placeholder, .container__form-contacts-company::placeholder, .container__form-contacts-email::placeholder, .container__form-contacts-phone::placeholder {
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-contacts-name {
+  grid-area: name;
+  margin-top: 30px;
+  margin-bottom: 42px;
+}
+.container__form-contacts-company {
+  grid-area: company;
+  margin-top: 30px;
+  margin-bottom: 42px;
+}
+.container__form-contacts-email {
+  grid-area: email;
+}
+.container__form-contacts-phone {
+  grid-area: phone;
+}
+.container__form-url {
+  grid-area: url;
+  margin-top: 42px;
+  height: 40px;
+  border: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-url::-moz-placeholder {
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-url::placeholder {
+  color: white;
+  font-family: var(--font-fam2);
+  font-size: 24px;
+}
+.container__form-privacy {
+  grid-area: privacy;
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+}
+.container__form-privacy-policy {
+  height: 19px;
+  font-family: var(--font-fam2);
+  font-size: 13px;
+  color: #898887;
+}
+.container__form-privacy-policy a {
+  color: white;
   text-decoration: underline;
+  text-decoration-color: white;
+}
+.container__form-button {
+  grid-area: button;
+  justify-self: center;
+  align-self: center;
+  margin-top: 28px;
 }/*# sourceMappingURL=form.css.map */

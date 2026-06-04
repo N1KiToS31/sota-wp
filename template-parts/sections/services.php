@@ -75,7 +75,7 @@
 
         </div>
 
-        <a class = 'services__container-cta'>
+        <a class = 'services__container-cta' href="<?php echo esc_url(home_url('/form')); ?>">
             <svg class = 'services__container-cta-img' width="193" height="100" viewBox="0 0 193 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M191.758 25.3867V74.6123L96.1289 99.4824L0.5 74.6123V25.3867L96.1289 0.516602L191.758 25.3867Z" stroke="white"/>
             </svg>
@@ -84,7 +84,7 @@
             </span>
         </a>
 
-        <a class = 'services__container-additional'>
+        <a class = 'services__container-additional' href = '#cases'>
             Примеры
         </a>
    </div>

@@ -1,0 +1,65 @@
+.footer {
+  &__container {
+    &-bee-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 69px;
+      height: 72px;
+      cursor: pointer;
+      text-decoration: none;
+
+      &-img {
+        display: block;
+        width: 69px;
+        height: 72px;
+        overflow: visible;
+      }
+
+      &:hover {
+        .footer__bee-wing {
+          &--left {
+            animation: bee-wing-left 0.18s infinite alternate ease-in-out;
+          }
+
+          &--right {
+            animation: bee-wing-right 0.18s infinite alternate ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  &__bee-wing {
+    transform-box: fill-box;
+    transform-origin: center center;
+
+    &--left {
+      transform-origin: right center;
+    }
+
+    &--right {
+      transform-origin: left center;
+    }
+  }
+}
+
+@keyframes bee-wing-left {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-18deg);
+  }
+}
+
+@keyframes bee-wing-right {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(18deg);
+  }
+}

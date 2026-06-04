@@ -1,7 +1,7 @@
 .footer{
     margin-top: auto;
     margin-bottom: 30px;
-    width: 100%;
+    
     &__container{
         position: relative;
         display: grid;
@@ -10,6 +10,8 @@
         align-items: end;
         
         &-more{
+            color: white;
+            text-decoration: none;
             font-size: 20px;
             font-family: var(--unbounded-font);
             cursor: pointer;
@@ -48,4 +50,8 @@
             }
         }
     }
+}
+
+.main-footer{
+    padding: 0 96px 0 96px;
 }
