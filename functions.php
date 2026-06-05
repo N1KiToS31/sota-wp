@@ -139,13 +139,87 @@ add_filter('show_admin_bar', '__return_false');
 add_action('admin_post_nopriv_send_project_form', 'send_project_form');
 add_action('admin_post_send_project_form', 'send_project_form');
 
+add_action('init', function () {
+    if (!session_id()) {
+        session_start();
+    }
+});
+
 function send_project_form() {
+
+
+    if (
+        !isset($_POST['project_nonce']) ||
+        !wp_verify_nonce(
+            sanitize_text_field($_POST['project_nonce']),
+            'project_form'
+        )
+    ) {
+        wp_die('Ошибка безопасности.');
+    }
+
+
+
+
     $name = sanitize_text_field($_POST['name'] ?? '');
     $company = sanitize_text_field($_POST['company'] ?? '');
     $email = sanitize_email($_POST['email'] ?? '');
     $phone = sanitize_text_field($_POST['phone'] ?? '');
     $site_url = esc_url_raw($_POST['site_url'] ?? '');
     $message = sanitize_text_field($_POST['message'] ?? '');
+
+
+    $errors = [];
+
+    if (mb_strlen($message) < 10) {
+        $errors['message'] =
+            'Описание должно содержать минимум 10 символов.';
+    }
+
+    if (mb_strlen($name) < 2) {
+        $errors['name'] =
+            'ФИО должно содержать минимум 2 символа.';
+    }
+
+    if (empty($email) && empty($phone)) {
+
+        $errors['email'] =
+            'Укажите e-mail или телефон';
+
+        $errors['phone'] =
+            'Укажите e-mail или телефон';
+    }
+
+    if (!empty($phone)) {
+
+        $phone_digits = preg_replace('/\D/', '', $phone);
+
+        if (
+            mb_strlen($phone_digits) < 11 ||
+            mb_strlen($phone_digits) > 12
+        ) {
+            $errors['phone'] =
+                'Телефон должен содержать 11–12 цифр.';
+        }
+    }
+
+    if (!empty($errors)) {
+
+        $_SESSION['form_errors'] = $errors;
+
+        $_SESSION['form_old'] = [
+            'message'  => $message,
+            'name'     => $name,
+            'company'  => $company,
+            'email'    => $email,
+            'phone'    => $phone,
+            'site_url' => $site_url,
+        ];
+
+        wp_safe_redirect(wp_get_referer());
+        exit;
+    }
+
 
     /**
      * Telegram
@@ -187,6 +261,9 @@ function send_project_form() {
         ]),
     ]);
 
+
+    unset($_SESSION['form_errors']);
+    unset($_SESSION['form_old']);
     wp_redirect(home_url('/'));
     exit;
 }
